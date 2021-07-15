@@ -28,7 +28,7 @@
         <%= link_to 'Log in', sessions_path, class:'navbar-item' %>
         <%= link_to 'Sign up', new_user_path, class:'navbar-item' %>
       <% else %>
-		                <%= link_to @current_user.username, root_path, class: "button is-info" %>
+		      <%= link_to @current_user.username, root_path, class: "button is-info" %>
       <% end %>
 	  </div>
 	  </div>
