@@ -11,51 +11,31 @@
   </head>
 
   <body>
-    	<% if flash[:notice] %>
-  		<div class="notification is-primary global-notification">
-  			<p class="notice"><%= notice %></p>
-  		</div>
-  	<% end %>
-  	<% if flash[:alert] %>
-  		<div class="notification is-danger global-notification">
-  			<p class="alert"><%= alert %></p>
-  		</div>
-  	<% end %>
-  	<nav class="navbar is-info">
-  		<div class="navbar-brand">
-  		<%= link_to root_path, class: "navbar-item", style: 'text-decoration:none;' do%>
-  			<h1 class="title is-5"><span class="icon"><i class="fas fa-users"></i></span>  Members Only</h1>
-  		<% end %>
+<nav class="navbar is-warning">
+  <%= link_to 'Culture & Science', articles_path, class:'title dark-gray is-2 mt-1' %>
 			<div class="navbar-burger burger" data-target="navbarExample">
 					<span></span>
 					<span></span>
 					<span></span>
   		</div>
-  	 </div>
 
 			<div id="navbarExample" class="navbar-menu">
-				<div class="navbar-end">
+							<div class="navbar-end">
           <div class="navbar-item">
 					<div class="field is-grouped">
-     			<p class="control">
-					<%= link_to 'New Article', new_article_path, class: "button is-info " %>
-				</p>
-              <p class="control">
-                <%= link_to @user.username, root_path, class: "button is-info" %>
-              </p>
-            <% else %>
-            <p class="control">
-              <%= link_to 'Sign In', new__path, class: "button is-info" %>
-            </p>
-						<p class="control">
-              <%= link_to 'Sign Up', new_member_registration_path, class: "button is-info" %>
-            </p>
-            <% end %>
-            </div>
-					</div>
-				</div>
-			</div>
-  	</nav>
+      <% if @current_user.nil? %>
+	    <%= link_to 'New Article', new_article_path, class: "navbar-item" %></h3>
+        <%= link_to 'Log in', sessions_path, class:'navbar-item' %>
+        <%= link_to 'Sign up', new_user_path, class:'navbar-item' %>
+      <% else %>
+		                <%= link_to @current_user.username, root_path, class: "button is-info" %>
+      <% end %>
+	  </div>
+	  </div>
+  </div>
+  </div>
+</nav>
+
     <%= yield %>
   </body>
 </html>
