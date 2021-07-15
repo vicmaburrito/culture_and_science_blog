@@ -5,8 +5,8 @@
     <% @articles.each do |article|  %>
     <%= article.title%><br>
     <%= article.text%><br>
-    <%= article.image%><br>
     <% end %>
-    <%= link_to 'Create a new Article', new_article_path%>
+    <%= link_to 'Create a new Article', new_article_path%><br>
+    <%= link_to 'Destroy Article', @article, method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
 </div>
