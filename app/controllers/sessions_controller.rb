@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    reset_session
+    session.clear
     redirect_to sessions_path
   end
 end
