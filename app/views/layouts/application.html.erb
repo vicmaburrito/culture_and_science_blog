@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ScienceBlog</title>
+    <title>C & S Blog</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,7 +12,7 @@
 
   <body>
 <nav class="navbar is-warning">
-  <%= link_to 'Culture & Science', articles_path, class:'title dark-gray is-2 mt-1' %>
+  <%= link_to 'Culture & Science', root_path, class:'title dark-gray is-2 mt-1' %>
 			<div class="navbar-burger burger" data-target="navbarExample">
 					<span></span>
 					<span></span>
@@ -24,7 +24,6 @@
           <div class="navbar-item">
 					<div class="field is-grouped">
       <% if @current_user.nil? %>
-	    <%= link_to 'New Article', new_article_path, class: "navbar-item" %></h3>
         <%= link_to 'Log in', sessions_path, class:'navbar-item' %>
         <%= link_to 'Sign up', new_user_path, class:'navbar-item' %>
       <% else %>
