@@ -13,10 +13,11 @@
 
   <div class="field">
     <%= form.label :username %>
-    <%= form.text_field :username, class: "form-control" %>
-  </div>
+  <div class="control">
+      <%= form.text_field :username, class: "form-control input ", autofocus: true %>
+  </div>  </div>
 
   <div class="actions">
-    <%= form.submit 'Sign up!', class: "mt-4 btn btn-success" %>
+    <%= form.submit 'Sign up!', class: "button is-warning is-light" %>
   </div>
 <% end %>
