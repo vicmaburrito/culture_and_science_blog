@@ -1,0 +1,21 @@
+  <%= form_with model: @article do |form| %>
+<div>
+  <div>
+    <%= form.label :title%><br>
+    <%= form.text_field :title, placeholder: "Your title of your article here"%>
+  </div>
+    <div>
+    <%= form.label :text%><br>
+    <%= form.text_field :text, placeholder: "Write something..."%>
+  </div>
+    <div>
+    <%= form.label :img%><br>
+    <%= form.text_field :img, placeholder: "dropopppp"%>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+  <% end %>
+  <%= link_to "back", root_path %>
+
+</div>
