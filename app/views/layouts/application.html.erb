@@ -14,9 +14,8 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
   <%#= link_to 'Culture & Science', root_path, class:'title title-navbar is-3 mt-1' %>
-    <img width="122" height="58" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Science_logo.svg/1280px-Science_logo.svg.png" >
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
+<%=link_to root_path do%><img width="122" height="58" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Science_logo.svg/1280px-Science_logo.svg.png" ></a>    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <%end%>  <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
