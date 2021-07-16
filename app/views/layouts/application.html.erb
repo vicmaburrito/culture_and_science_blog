@@ -37,12 +37,8 @@
         </a>
 
         <div class="navbar-dropdown">
-          <%= link_to 'History', root_path, class:'navbar-item'%>
-          <%= link_to 'Philosophy', root_path, class:'navbar-item'%>
-          <%= link_to 'Engineering', root_path, class:'navbar-item'%>
-          <%= link_to 'Art', root_path, class:'navbar-item'%>
-          <%= link_to 'Astrophysics', root_path, class:'navbar-item '%>
-          <%= link_to 'Psychology', root_path, class:'navbar-item'%>
+              <%= categories_menu(@top_categories) %>
+
           <hr class="navbar-divider">
           <a href="https://github.com/vicmaburrito/culture_and_science_blog/issues/new" class="navbar-item">
             Report an issue

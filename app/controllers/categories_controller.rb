@@ -7,7 +7,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @categories = @category.articles.limit(4)
+    @categories = @category.articles.limit(6)
   end
 
   def new
