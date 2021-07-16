@@ -32,9 +32,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bulma-rails', '~> 0.9.1'
 
 # Add font-awesome
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 
-#Add Faker Gem
+# Add Faker Gem
 gem 'faker', '~> 1.6', '>= 1.6.6'
 
 group :development, :test do
