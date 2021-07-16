@@ -22,8 +22,14 @@
   </div>
 
   <div class="field">
+  <% if @article.image.attached? %>
+    <%= image_tag url_for(@article.image), style: "width: 200px; display: block"%>
+  <%end%>
+
+    <%=form.label :image%>
     <%= form.file_field :image, class:"file-label" %>
   </div>
+
   <div class="field">
     <%= form.label :category_id, 'Category' %>
     <%= form.collection_select :category_id, Category.order(:name), :id, :name %>
