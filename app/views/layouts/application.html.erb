@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>C & S Blog</title>
+    <title>C&S_Blog</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,33 +10,63 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-<nav class="navbar is-warning">
-  <%= link_to 'Culture & Science', root_path, class:'title dark-gray is-2 mt-1' %>
-			<div class="navbar-burger burger" data-target="navbarExample">
-					<span></span>
-					<span></span>
-					<span></span>
-  		</div>
-
-			<div id="navbarExample" class="navbar-menu">
-							<div class="navbar-end">
-          <div class="navbar-item">
-					<div class="field is-grouped">
-      <% if @current_user.nil? %>
-        <%= link_to 'Log in', sessions_path, class:'navbar-item' %>
-        <%= link_to 'Sign up', new_user_path, class:'navbar-item' %>
-      <% else %>
-		      <%= link_to @current_user.username, root_path, class: "button is-info" %>
-          <%= link_to 'New Article', new_article_path, class: "navbar-item" %>
-          <%= link_to 'Logout', sessions_path, method: :delete, class:'navbar-item' %>
-      <% end %>
-	  </div>
-	  </div>
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+  <%#= link_to 'Culture & Science', root_path, class:'title title-navbar is-3 mt-1' %>
+    <img width="122" height="58" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Science_logo.svg/1280px-Science_logo.svg.png" >
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
   </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <span class="navbar-item">  </span>
+      <%= link_to 'Home', root_path, class:'navbar-item'%>
+
+      <a class="navbar-item">
+        Documentation
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Category's
+        </a>
+
+        <div class="navbar-dropdown">
+          <%= link_to 'History', root_path, class:'navbar-item'%>
+          <%= link_to 'Philosophy', root_path, class:'navbar-item'%>
+          <%= link_to 'Engineering', root_path, class:'navbar-item'%>
+          <%= link_to 'Art', root_path, class:'navbar-item'%>
+          <%= link_to 'Astrophysics', root_path, class:'navbar-item '%>
+          <%= link_to 'Psychology', root_path, class:'navbar-item'%>
+          <hr class="navbar-divider">
+          <a href="https://github.com/vicmaburrito/culture_and_science_blog/issues/new" class="navbar-item">
+            Report an issue
+          </a>
+        </div>
+      </div>
+    </div>
+
+		<div class="navbar-end">
+      <div class="navbar-item">
+				<div class="field is-grouped">
+          <% if @current_user.nil? %>
+            <%= link_to 'Log in', sessions_path, class:'navbar-item' %>
+            <%= link_to 'Sign up', new_user_path, class:'navbar-item' %>
+          <% else %>
+		        <%= link_to @current_user.username, root_path, class: "button is-info" %>
+            <%= link_to 'New Article', new_article_path, class: "navbar-item" %>
+            <%= link_to 'Logout', sessions_path, method: :delete, class:'navbar-item' %>
+          <% end %>
+	      </div>
+	    </div>
+    </div>
   </div>
 </nav>
-
     <%= yield %>
   </body>
 </html>
