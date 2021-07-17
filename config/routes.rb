@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resources :users, only: %i[new create edit update]
+  resources :users
   resources :articles, only: [:new, :create, :index]
-  resources :articles
+  resources :articles do
+    resource :vote, only: %w[create destroy]
+  end
   resources :sessions, only: %w[index create destroy]
   delete "/sessions", to: 'sessions#destroy' 
   resources :categories
