@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :users
   resources :articles, only: [:new, :create, :index]
   resources :articles do
-    resource :vote, only: %w[create destroy]
+    resource :vote, only: %w[create show destroy]
   end
   resources :sessions, only: %w[index create destroy]
   delete "/sessions", to: 'sessions#destroy' 
