@@ -8,6 +8,10 @@
   <strong>Category:</strong>
   <%= @article.category.name %>
 </p>
+
+
+
+
     <% if @article.image.attached? %>
       <%= image_tag url_for(@article.image), width:'300px' %>
     <% end %><br>
