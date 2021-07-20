@@ -12,51 +12,45 @@
   </head>
 
 <body>
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="navbar-brand">
-  <%#= link_to 'Culture & Science', root_path, class:'title title-navbar is-3 mt-1' %>
-<%=link_to root_path do%><img width="122" height="58" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Science_logo.svg/1280px-Science_logo.svg.png" ></a>    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-    <%end%>  <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <span class="navbar-item">  </span>
-      <%= link_to 'Home', root_path, class:'navbar-item'%>
-
-      <a class="navbar-item">
-        Documentation
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Category's
+  <%=link_to root_path do%><img width="122" height="58" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Science_logo.svg/1280px-Science_logo.svg.png" ></a>    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+<%end%>
+</div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" style="text-decoration:none; color: rgba(255, 255, 255, 0.55); ">
+          Categories
         </a>
-
         <div class="navbar-dropdown">
               <%= categories_menu(@top_categories) %>
-
           <hr class="navbar-divider">
           <a href="https://github.com/vicmaburrito/culture_and_science_blog/issues/new" class="navbar-item">
             Report an issue
           </a>
         </div>
-      </div>
-    </div>
-
-		<div class="navbar-end">
+      </li>
+    </ul>
+<div class="navbar-end">
       <div class="navbar-item">
 				<div class="field is-grouped">
           <% if @current_user.nil? %>
-            <%= link_to 'Log in', sessions_path, class:'navbar-item' %>
-            <%= link_to 'Sign up', new_user_path, class:'navbar-item' %>
-          <% else %>
-		        <%= link_to @current_user.username, root_path, style: 'text-decoration:none;', class: "button is-info" %>
-            <%= link_to 'New Article', new_article_path, class: "navbar-item" %>
-            <%= link_to 'Logout', sessions_path, method: :delete, class:'navbar-item' %>
+            <%= link_to 'Log in', sessions_path, class:'navbar-item', style:'text-decoration:none; color: rgba(255, 255, 255, 0.55);'%>
+            <%= link_to 'Sign up',new_user_path, class:"navbar-item", style:'text-decoration:none; color: rgba(255, 255, 255, 0.55);' %>
+          <% else %>  
+		        <%= link_to @current_user.username, root_path, style: 'text-decoration:none;', class: "button " %>
+            <%= link_to 'New Article', new_article_path, class: "navbar-item", style: 'text-decoration:none; color: rgba(255, 255, 255, 0.55);' %>
+            <%= link_to 'Logout', sessions_path, method: :delete, class:'navbar-item', style: 'text-decoration:none; color: rgba(255, 255, 255, 0.55);' %>
           <% end %>
 	      </div>
 	    </div>
