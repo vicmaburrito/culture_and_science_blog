@@ -18,4 +18,10 @@ module CategoriesHelper
   def psychology_path(_query_psychology)
     Category.find(6)
   end
+
+  def bottom_img(art, idx)
+    img = ''
+    img << image_tag(url_for(art.image.blob), class: 'article-img')
+    img.html_safe if idx.even?
+  end
 end
