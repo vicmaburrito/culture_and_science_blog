@@ -24,9 +24,26 @@
 
 .article-img {
   background:
-    linear-gradient(55deg, rgba(0, 0, 0, 0.301) 30%, rgba(17, 8, 8, 0.6) 80%) no-repeat center center/cover;;
+    linear-gradient(55deg, rgba(0, 0, 0, 0.301) 30%, rgba(17, 8, 8, 0.6) 80%) no-repeat center center/cover;
 }
 
 .h-40 {
   height: 45vh;
+}
+
+.categories-container {
+  height: 94vh;
+}
+
+.half {
+  height: 50vh;
+}
+
+.bg-cover {
+  object-fit: cover;
+  // height: auto;
+}
+
+.w-25vw {
+  width: 25vw;
 }

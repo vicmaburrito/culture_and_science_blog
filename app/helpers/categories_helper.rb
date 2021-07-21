@@ -19,6 +19,12 @@ module CategoriesHelper
     Category.find(6)
   end
 
+  def top_img(art, idx)
+    img = ''
+    img << image_tag(url_for(art.image.blob), class: 'half w-25vw bg-cover')
+    img.html_safe if idx.odd?
+  end
+
   def bottom_img(art, idx)
     img = ''
     img << image_tag(url_for(art.image.blob), class: 'article-img')
