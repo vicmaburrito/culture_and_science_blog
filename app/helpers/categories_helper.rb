@@ -24,4 +24,8 @@ module CategoriesHelper
     img << image_tag(url_for(art.image.blob), class: 'article-img')
     img.html_safe if idx.even?
   end
+
+  def read_more(art)
+    art.try { |a| a.text.truncate(150, separator: ' ', omission: '... To be continued.') }
+  end
 end
