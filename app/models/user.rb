@@ -3,5 +3,4 @@ class User < ApplicationRecord
                        format: { with: /\A[\w-]+\z/, message: 'your name requirements' }
   has_many :articles
   has_many :votes, dependent: :destroy
-
 end
