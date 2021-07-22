@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  resources :votes
+  #resources :votes
   resources :users
   resources :articles, only: [:new, :create, :index]
   resources :articles do
-    resource :vote
-  end
+    resources :votes, only: [:create, :destroy]
+      end
   resources :sessions, only: %w[index create destroy]
   delete "/sessions", to: 'sessions#destroy' 
   resources :categories
