@@ -14,6 +14,6 @@
       <%= image_tag url_for(@article.image), width:'300px' %>
     <% end %><br>
 
-    <%= render partial: "votes" %>
+      <%= vote_or_unvote_btn(@article) %>
 
     <%= link_to 'back', root_path %>

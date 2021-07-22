@@ -4,7 +4,4 @@ class User < ApplicationRecord
   has_many :articles
   has_many :votes, dependent: :destroy
 
-  def votes?
-    article.votes.where(user_id: id).any?
-  end
 end

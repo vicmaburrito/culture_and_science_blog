@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users
   resources :articles, only: [:new, :create, :index]
   resources :articles do
-    resources :votes, only: [:create, :destroy]
+    resources :votes
       end
   resources :sessions, only: %w[index create destroy]
   delete "/sessions", to: 'sessions#destroy' 
