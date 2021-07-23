@@ -2,12 +2,12 @@ class SessionsController < ApplicationController
   def index; end
 
   def create
-    @user = User.find_by(username: params[:username])
+    @user = User.find_by(name: params[:name])
 
     if @user
       flash[:notice] = 'You have signed in!'
       session[:id] = @user.id
-      session[:username] = @user.username
+      session[:name] = @user.name
       redirect_to articles_path
     else
       flash[:alert] = 'No User found. Please sign up'

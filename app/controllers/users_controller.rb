@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         session[:id] = @user.id
-        session[:username] = @user.username
+        session[:name] = @user.name
         format.html { redirect_to articles_path, notice: 'User successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -55,6 +55,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:username)
+    params.require(:user).permit(:name)
   end
 end

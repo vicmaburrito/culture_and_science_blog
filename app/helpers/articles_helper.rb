@@ -1,6 +1,6 @@
 module ArticlesHelper
   def author_name(article)
-    article.user.username
+    article.user.name
   end
 
   def top_image(article)
