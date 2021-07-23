@@ -7,7 +7,7 @@
     #   Character.create(name: 'Luke', movie: movies.first)
 
 
-    10.times do
+    60.times do
       User.create( name: Faker::Name.name )
     end
 
@@ -17,3 +17,13 @@
             art = Category.create(name: 'art', priority: 4)
     astrophysics = Category.create(name: 'astrophysics', priority: 5)
       psychology = Category.create(name: 'psychology', priority: 6)
+
+      User.all.each do |author|
+        random = 1 + rand(6)
+        Article.create(
+          title: Faker::Lorem.sentence(word_count: 3),
+          text: Faker::Lorem.paragraph(sentence_count: 40),
+          category_id: random,
+          user_id: author.id
+        )
+      end
