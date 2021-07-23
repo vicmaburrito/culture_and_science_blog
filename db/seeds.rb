@@ -27,3 +27,12 @@
           user_id: author.id
         )
       end
+
+      Article.all.each do |art|
+        rand_img = 1 + rand(3)
+        art.image.attach(
+          io: File.open("app/assets/images/#{rand_img}.jpg"),
+          filename: "#{rand_img}.jpg"
+        )
+        art.save
+      end
