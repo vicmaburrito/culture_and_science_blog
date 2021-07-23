@@ -36,3 +36,9 @@
         )
         art.save
       end
+
+      60.times do
+        rand_usr = 1 + rand(60)
+        rand_art = 1 + rand(60)
+        Vote.create( article_id: rand_art, user_id: rand_usr )
+      end
