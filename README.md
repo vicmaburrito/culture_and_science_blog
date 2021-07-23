@@ -66,8 +66,8 @@ Open `http://localhost:3000/` in your browser.
 ```
 
 👤 **Manuel Aldaraca**
-- GitHub:[@vicmaburrito] (https://github.com/vicmaburrito) 
-- Twitter: [@twitterhandle](https://twitter.com/ManuelAldaraca)
+- GitHub: [@vicmaburrito](https://github.com/vicmaburrito) 
+- Twitter: [@Manuelaldaraca](https://twitter.com/ManuelAldaraca)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/manuel-aldaraca)
 
 ## 🤝 Contributing
@@ -81,4 +81,4 @@ Feel free to check the [issues page](https://github.com/vicmaburrito/culture_and
 Give a ⭐️ if you like this project!
 
 ## 📝 License MIT
-- This project is [MIT](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt) licensed.
+This project is [MIT](./LICENSE) licensed.
