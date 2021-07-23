@@ -48,7 +48,7 @@
             <%= link_to 'Log in', sessions_path, class:'nav-link', style:'text-decoration:none; color: rgba(255, 255, 255, 0.55);'%>
             <%= link_to 'Sign up',new_user_path, class:"nav-link", style:'text-decoration:none; color: rgba(255, 255, 255, 0.55);' %>
           <% else %>  
-		        <%= link_to @current_user.username, root_path, style: 'text-decoration:none;', class: "button" %>
+		        <%= link_to @current_user.name, root_path, style: 'text-decoration:none;', class: "button" %>
             <%= link_to 'New Article', new_article_path, class: "nav-link", style: 'text-decoration:none; color: rgba(255, 255, 255, 0.55);' %>
             <%= link_to 'Logout', sessions_path, method: :delete, class:'nav-link', style: 'text-decoration:none; color: rgba(255, 255, 255, 0.55);' %>
           <% end %>
