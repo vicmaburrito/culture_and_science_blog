@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  #resources :votes
   resources :users
   resources :articles, only: [:new, :create, :index]
   resources :articles do
