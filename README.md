@@ -46,8 +46,7 @@ Rails: 6.1.4
 Postgres: >=9.5
 
 ### Live Preview
-Current N/A
-
+https://quiet-river-96910.herokuapp.com/
 
 ### Usage
 
