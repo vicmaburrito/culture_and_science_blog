@@ -42,6 +42,7 @@ gem 'bootstrap'
 
 gem 'aws-sdk-s3', '~> 1.96', '>= 1.96.1', require: false
 
+gem 'sprockets', '~> 4.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -61,6 +62,12 @@ group :development do
   gem 'spring'
   # Add Rubocop Test
   gem 'rubocop', '~> 1.17.0'
+end
+
+group :assets do
+  gem 'therubyracer'
+  gem 'coffee-rails'
+  gem 'uglifier', '>= 1.0.3', require: 'uglifier'
 end
 
 group :test do
