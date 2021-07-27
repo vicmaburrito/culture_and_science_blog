@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+@import 'bulma';
+@import 'bootstrap';
+@import 'font-awesome';
+
+.navbar-item,
+.navbar-link {
+  text-decoration: none;
+}
+
+.categories-container {
+  height: 94vh;
+}
+
+.half {
+  height: 50vh;
+}
+
+.bg-cover {
+  object-fit: cover;
+}
+
+.w-25vw {
+  width: 25vw;
+}

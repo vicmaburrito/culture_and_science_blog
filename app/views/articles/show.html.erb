@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @article.title %><br>
+    <strong>Texto:</strong>
+  <%= @article.text %><br>
+  <strong>Category:</strong>
+  <%= @article.category.name %><br>
+    <strong>Author:</strong>
+  <%= author_name(@article) %>
+</p>
+    <% if @article.image.attached? %>
+      <%= image_tag url_for(@article.image), width:'300px' %>
+    <% end %><br>
+
+      <%= vote_or_unvote_btn(@article) %>
+
+    <%= link_to 'back', root_path %>

@@ -1,0 +1,18 @@
+<div class="columns is-centered">
+<div class="column is-5 ">
+  <h1 class="title is-3">Log In</h1>
+
+  <%= form_with url: sessions_path do |form| %>
+<div class="field">
+      <%= form.label :name, class: "label" %>
+  <div class="control">
+      <%= form.text_field :name, class: "form-control input ", autofocus: true %>
+  </div>
+</div>
+
+    <div class="actions">
+      <%= form.submit 'Log In', class: "button is-light" %>
+    </div>
+    <% end %>
+  </div>
+</div>
