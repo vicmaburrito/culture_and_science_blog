@@ -65,8 +65,8 @@ group :development do
 end
 
 group :assets do
-  gem 'therubyracer'
   gem 'coffee-rails'
+  gem 'therubyracer'
   gem 'uglifier', '>= 1.0.3', require: 'uglifier'
 end
 
