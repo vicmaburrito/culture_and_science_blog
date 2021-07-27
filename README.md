@@ -31,6 +31,12 @@ Install gems with:
 bundle install
 ```
 
+Setup app with:
+
+```
+rails webpacker:install
+```
+
 Setup database with:
 
 ```
